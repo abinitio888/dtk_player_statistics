@@ -98,6 +98,7 @@ def player_summary_table(df: pd.DataFrame) -> pd.DataFrame:
 # ─── sidebar ──────────────────────────────────────────────────────────────────
 
 with st.sidebar:
+    st.image("assets/dtk_logo.png", use_container_width=True)
     st.markdown("## 🎾 DTK Tennis Tracker")
     st.caption("Coach Performance Dashboard")
 
