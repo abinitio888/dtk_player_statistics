@@ -179,7 +179,7 @@ def fetch(
         return
 
     # Write one file per format containing all players
-    stem = f"matches_{period.from_date}_{period.to_date}"
+    stem = "player_data"
     for fmt_name in cfg.output.formats:
         out_path = out_root / f"{stem}.{fmt_name}"
         if fmt_name == "csv":

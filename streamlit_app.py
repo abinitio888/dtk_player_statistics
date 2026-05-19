@@ -61,9 +61,9 @@ def load_csv(data) -> pd.DataFrame:
     return df
 
 
-def find_local_csvs() -> list[Path]:
-    out = Path("output")
-    return sorted(out.glob("*.csv"), reverse=True) if out.exists() else []
+def find_default_csv() -> Path | None:
+    p = Path("output") / "player_data.csv"
+    return p if p.exists() else None
 
 
 # ─── metric helpers ───────────────────────────────────────────────────────────
@@ -117,15 +117,9 @@ with st.sidebar:
             st.error(f"Failed to load file: {e}")
 
     if df_raw is None:
-        local_files = find_local_csvs()
-        if local_files:
-            labels = [f.name for f in local_files]
-            idx = st.selectbox(
-                "Or choose a local file", range(len(labels)),
-                format_func=lambda i: labels[i],
-                label_visibility="collapsed",
-            )
-            df_raw = load_csv(local_files[idx])
+        default = find_default_csv()
+        if default:
+            df_raw = load_csv(default)
         else:
             st.info(
                 "Upload a CSV file, or generate one locally with:\n\n"

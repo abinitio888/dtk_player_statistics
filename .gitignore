@@ -6,9 +6,11 @@ build/
 .venv/
 venv/
 .env
-output/
+output/*
 *.csv
 *.json
+!output/player_data.csv
+!output/player_data.json
 .pytest_cache/
 .ruff_cache/
 .mypy_cache/
