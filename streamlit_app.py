@@ -61,9 +61,11 @@ def load_csv(data) -> pd.DataFrame:
     return df
 
 
+_DEFAULT_CSV = Path("output") / "player_data.csv"
+
+
 def find_default_csv() -> Path | None:
-    p = Path("output") / "player_data.csv"
-    return p if p.exists() else None
+    return _DEFAULT_CSV if _DEFAULT_CSV.exists() else None
 
 
 # ─── metric helpers ───────────────────────────────────────────────────────────
@@ -100,36 +102,17 @@ with st.sidebar:
     st.caption("Coach Performance Dashboard")
     st.divider()
 
-    # ── data source ───────────────────────────────────────────────────────────
-    st.markdown("**Data Source**")
-    uploaded = st.file_uploader(
-        "Upload CSV", type="csv",
-        help="CSV exported by dtk-stats fetch",
-        label_visibility="collapsed",
-    )
-
     df_raw: pd.DataFrame | None = None
 
-    if uploaded is not None:
-        try:
-            df_raw = load_csv(uploaded)
-        except Exception as e:
-            st.error(f"Failed to load file: {e}")
-
-    if df_raw is None:
-        default = find_default_csv()
-        if default:
-            df_raw = load_csv(default)
-        else:
-            st.info(
-                "Upload a CSV file, or generate one locally with:\n\n"
-                "```\ndtk-stats fetch -c config/my_config.yaml\n```"
-            )
+    default = find_default_csv()
+    if default:
+        df_raw = load_csv(default)
+    else:
+        st.error("Data file not found: output/player_data.csv")
 
     if df_raw is None:
         st.stop()
 
-    st.success(f"{len(df_raw):,} matches loaded", icon="✅")
     st.divider()
 
     # ── filters ───────────────────────────────────────────────────────────────
