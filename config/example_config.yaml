@@ -1,0 +1,22 @@
+# dtk-stats configuration
+# Copy this file, fill in your players, and run:
+#   dtk-stats fetch -c config/my_config.yaml
+
+period:
+  from: "2025-01-01"     # ISO date: YYYY-MM-DD
+  to:   "2026-12-31"
+
+output:
+  formats: [csv]   # "csv", "json", or both
+  directory: ./output
+
+players:
+  - name: "Vincent Englund"
+    sources:
+      - url: "https://te.tournamentsoftware.com/player-profile/2FCCE1EF-24CF-465E-AB76-445A0EF24A45"
+      - url: "https://svtf.tournamentsoftware.com/player-profile/999BE5C3-18FF-4AF6-A5B5-AA82202BCAD7"
+
+  - name: "Maria Wernerhjelm"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/CD325A2A-900A-4185-A292-D5FA9B1FD9F9"
+      - url: "https://www.itftennis.com/en/players/maria-wernerhjelm/800828384/swe/jt/s/overview/"

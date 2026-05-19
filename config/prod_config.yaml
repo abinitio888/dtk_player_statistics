@@ -1,0 +1,119 @@
+# dtk-stats configuration
+# Copy this file, fill in your players, and run:
+#   dtk-stats fetch -c config/my_config.yaml
+
+period:
+  from: "2025-01-01"     # ISO date: YYYY-MM-DD
+  to:   "2026-12-31"
+
+output:
+  formats: [csv]   # "csv", "json", or both
+  directory: ./output
+
+players:
+  - name: "Vincent Englund"
+    sources:
+      - url: "https://te.tournamentsoftware.com/player-profile/2FCCE1EF-24CF-465E-AB76-445A0EF24A45"
+      - url: "https://svtf.tournamentsoftware.com/player-profile/999BE5C3-18FF-4AF6-A5B5-AA82202BCAD7"
+
+  - name: "Carl Wallstedt Fjelkner"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/A8E703D1-FC84-47E5-861F-D58D8A77DD98"
+
+  - name: "Leon Weithz"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/7F2EA077-F27C-4F4F-BDC6-A1739DC93269"
+
+  - name: "Leo Tomsvik"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/63B8832D-DC9A-4642-BA9F-A79F318E6FE5"
+
+  - name: "Oliver Åhman"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/6814B0F8-070D-48B5-AEE3-6E1773A1990F"
+
+  - name: "Charlie Wikström"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/02691E3E-31C7-4C3D-9CE2-7F50DDC1FD84"
+
+  - name: "Lukas Tolleryd"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/44FAEACA-9D12-4F99-A237-EEE9A89E45CD"
+      - url: "https://te.tournamentsoftware.com/player-profile/8e2ed540-63f5-4f7e-b4ac-89a804ee6291"
+
+  - name: "Maria Wernerhjelm"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/CD325A2A-900A-4185-A292-D5FA9B1FD9F9"
+      - url: "https://www.itftennis.com/en/players/maria-wernerhjelm/800828384/swe/jt/s/overview/"
+
+  - name: "Sophie Eskilsson"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/9BBC6170-0E26-43BF-883F-7955D56D328F"
+
+  - name: "Isabella Weithz"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/27B7296A-72E9-4A4B-A652-911D31039961"
+
+  - name: "Carla Czechowski"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/225B18FB-5797-412A-9B13-EF3112DE54E1"
+
+  - name: "Natalie Skytte Af Sätra"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/C8B38085-334C-4C44-8C18-86B7727FA0A1"
+
+  - name: "Estrid Backlund Sandgren"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/84A7589E-A171-477B-BAAA-AD54F80955BD"
+
+  - name: "Fredrik Åhman"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/7112A27A-801E-4485-BCC2-B5C04BDE5D36"
+
+  - name: "Fabian Otendal"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/9A4C1DC5-E102-4274-B394-6C6939EB7B97"
+
+  - name: "Ted Tham"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/207CC670-86ED-4A80-9E5E-7920B827DB15"
+
+  - name: "Lucas Jin"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/1C94D946-461C-4CAC-8553-A95DDA62D4CE"
+
+  - name: "Fred Öberg"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/DF95E01F-8DB1-42D9-BFC9-F3943FB4307E"
+
+  - name: "Alice Forsberg"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/B68251DD-F7BC-436A-9A81-0B9788CB1920"
+
+  - name: "Paula Skårner"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/595B97B4-56F3-441F-AE1A-CA9D12C18769"
+
+  - name: "Gabriel Otendal"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/BF709C4C-3A5A-470F-AB13-D3CDF9F7F830"
+
+  - name: "Maximilian Möller"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/d79a1277-5551-4376-af16-58d0c7e94cec"
+
+  - name: "Felicia Ripa"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/BD6AED3F-3B7F-4E44-9020-9B88E21655B8"
+
+  - name: "Ebba Ahlcrona"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/113EDF97-9EDD-427C-B7A9-0C51DCE5F5EC"
+
+  - name: "Jakob Ohlsén"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/fe82dfdf-9214-418f-9661-6ab4099e6753"
+
+  - name: "Knut Håkansson Giertz"
+    sources:
+      - url: "https://svtf.tournamentsoftware.com/player-profile/275F089E-166F-4C86-AF77-D918F3FB4837"
