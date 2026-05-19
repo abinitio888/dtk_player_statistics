@@ -100,7 +100,6 @@ def player_summary_table(df: pd.DataFrame) -> pd.DataFrame:
 with st.sidebar:
     st.markdown("## 🎾 DTK Tennis Tracker")
     st.caption("Coach Performance Dashboard")
-    st.divider()
 
     df_raw: pd.DataFrame | None = None
 
@@ -113,7 +112,6 @@ with st.sidebar:
     if df_raw is None:
         st.stop()
 
-    st.divider()
 
     # ── filters ───────────────────────────────────────────────────────────────
     st.markdown("**Filters**")
